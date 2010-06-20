@@ -1,0 +1,3 @@
+This framework is basically a wrapper for easy setup of Bonjour and send data via sockets.
+
+Only the most essential features are implemented and more error handling will come as well as an iPhone version. 
