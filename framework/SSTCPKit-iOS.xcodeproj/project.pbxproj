@@ -1,0 +1,261 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F4C47B311D114E400DE3D07 /* SSTCPKit-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F4C47B211D114E400DE3D07 /* SSTCPKit-iOS.h */; };
+		4F4C47D211D1152A00DE3D07 /* AsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F4C47C811D1152A00DE3D07 /* AsyncSocket.h */; };
+		4F4C47D311D1152A00DE3D07 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F4C47C911D1152A00DE3D07 /* AsyncSocket.m */; };
+		4F4C47D411D1152A00DE3D07 /* SSClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F4C47CA11D1152A00DE3D07 /* SSClient.h */; };
+		4F4C47D511D1152A00DE3D07 /* SSClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F4C47CB11D1152A00DE3D07 /* SSClient.m */; };
+		4F4C47D611D1152A00DE3D07 /* SSClientBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F4C47CC11D1152A00DE3D07 /* SSClientBase.h */; };
+		4F4C47D711D1152A00DE3D07 /* SSClientBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F4C47CD11D1152A00DE3D07 /* SSClientBase.m */; };
+		4F4C47D811D1152A00DE3D07 /* SSClientConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F4C47CE11D1152A00DE3D07 /* SSClientConnection.h */; };
+		4F4C47D911D1152A00DE3D07 /* SSClientConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F4C47CF11D1152A00DE3D07 /* SSClientConnection.m */; };
+		4F4C47DA11D1152A00DE3D07 /* SSServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F4C47D011D1152A00DE3D07 /* SSServer.h */; };
+		4F4C47DB11D1152A00DE3D07 /* SSServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F4C47D111D1152A00DE3D07 /* SSServer.m */; };
+		AA747D9F0F9514B9006C5449 /* SSTCPKit_iOS_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* SSTCPKit_iOS_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4F4C47B211D114E400DE3D07 /* SSTCPKit-iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SSTCPKit-iOS.h"; sourceTree = "<group>"; };
+		4F4C47C811D1152A00DE3D07 /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncSocket.h; path = Source/AsyncSocket.h; sourceTree = "<group>"; };
+		4F4C47C911D1152A00DE3D07 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncSocket.m; path = Source/AsyncSocket.m; sourceTree = "<group>"; };
+		4F4C47CA11D1152A00DE3D07 /* SSClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSClient.h; path = Source/SSClient.h; sourceTree = "<group>"; };
+		4F4C47CB11D1152A00DE3D07 /* SSClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSClient.m; path = Source/SSClient.m; sourceTree = "<group>"; };
+		4F4C47CC11D1152A00DE3D07 /* SSClientBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSClientBase.h; path = Source/SSClientBase.h; sourceTree = "<group>"; };
+		4F4C47CD11D1152A00DE3D07 /* SSClientBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSClientBase.m; path = Source/SSClientBase.m; sourceTree = "<group>"; };
+		4F4C47CE11D1152A00DE3D07 /* SSClientConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSClientConnection.h; path = Source/SSClientConnection.h; sourceTree = "<group>"; };
+		4F4C47CF11D1152A00DE3D07 /* SSClientConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSClientConnection.m; path = Source/SSClientConnection.m; sourceTree = "<group>"; };
+		4F4C47D011D1152A00DE3D07 /* SSServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSServer.h; path = Source/SSServer.h; sourceTree = "<group>"; };
+		4F4C47D111D1152A00DE3D07 /* SSServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSServer.m; path = Source/SSServer.m; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* SSTCPKit_iOS_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSTCPKit_iOS_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libSSTCPKit_iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSSTCPKit_iOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libSSTCPKit_iOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* SSTCPKit-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = "SSTCPKit-iOS";
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4F4C47C811D1152A00DE3D07 /* AsyncSocket.h */,
+				4F4C47C911D1152A00DE3D07 /* AsyncSocket.m */,
+				4F4C47CA11D1152A00DE3D07 /* SSClient.h */,
+				4F4C47CB11D1152A00DE3D07 /* SSClient.m */,
+				4F4C47CC11D1152A00DE3D07 /* SSClientBase.h */,
+				4F4C47CD11D1152A00DE3D07 /* SSClientBase.m */,
+				4F4C47CE11D1152A00DE3D07 /* SSClientConnection.h */,
+				4F4C47CF11D1152A00DE3D07 /* SSClientConnection.m */,
+				4F4C47D011D1152A00DE3D07 /* SSServer.h */,
+				4F4C47D111D1152A00DE3D07 /* SSServer.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* SSTCPKit_iOS_Prefix.pch */,
+				4F4C47B211D114E400DE3D07 /* SSTCPKit-iOS.h */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* SSTCPKit_iOS_Prefix.pch in Headers */,
+				4F4C47B311D114E400DE3D07 /* SSTCPKit-iOS.h in Headers */,
+				4F4C47D211D1152A00DE3D07 /* AsyncSocket.h in Headers */,
+				4F4C47D411D1152A00DE3D07 /* SSClient.h in Headers */,
+				4F4C47D611D1152A00DE3D07 /* SSClientBase.h in Headers */,
+				4F4C47D811D1152A00DE3D07 /* SSClientConnection.h in Headers */,
+				4F4C47DA11D1152A00DE3D07 /* SSServer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* SSTCPKit-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "SSTCPKit-iOS" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SSTCPKit-iOS";
+			productName = "SSTCPKit-iOS";
+			productReference = D2AAC07E0554694100DB518D /* libSSTCPKit_iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "SSTCPKit-iOS" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* SSTCPKit-iOS */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* SSTCPKit-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F4C47D311D1152A00DE3D07 /* AsyncSocket.m in Sources */,
+				4F4C47D511D1152A00DE3D07 /* SSClient.m in Sources */,
+				4F4C47D711D1152A00DE3D07 /* SSClientBase.m in Sources */,
+				4F4C47D911D1152A00DE3D07 /* SSClientConnection.m in Sources */,
+				4F4C47DB11D1152A00DE3D07 /* SSServer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/SSTCPKit_iOS.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SSTCPKit_iOS_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = SSTCPKit_iOS;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/SSTCPKit_iOS.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SSTCPKit_iOS_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = SSTCPKit_iOS;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.2;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "SSTCPKit-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "SSTCPKit-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
