@@ -89,10 +89,12 @@
 
 -(void)netServiceBrowser:(NSNetServiceBrowser *)aBrowser didRemoveService:(NSNetService *)aService moreComing:(BOOL)more 
 {
-	NSLog(@"removed service");
 	[_services removeObject:aService];
     if ( aService == _connectedService ) {
 		[self disconnect];
+	}
+	if (self.delegate && [self.delegate respondsToSelector:@selector(client:gotServiceRemoved:)]) {
+		[self.delegate client: self gotServiceRemoved: aService];
 	}
 }
 

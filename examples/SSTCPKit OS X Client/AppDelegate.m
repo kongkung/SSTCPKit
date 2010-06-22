@@ -1,19 +1,8 @@
-//
-//  SSTCPKit_OS_X_ClientAppDelegate.m
-//  SSTCPKit OS X Client
-//
-//  Created by Gustaf Lindqvist on 2010-06-20.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
-//
-
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
-
 - (void)setupClient;
-
 @end
-
 
 @implementation AppDelegate
 
@@ -38,17 +27,25 @@
 
 -(void)clientDidConnect:(SSClient *)aClient
 {
+	NSLog(@"clientDidConnect:");
 	[sendButton setEnabled:YES];
+}
+
+- (void)client:(SSClient *)aClient gotServiceRemoved:(NSNetService *)aNetService
+{
+	NSLog(@"client:gotServiceRemoved:");
+	[sendButton setEnabled:NO];
 }
 
 - (void)sendButtonClicked:(id)sender
 {
 	NSString *val = [textField stringValue];
-	if (![val isEqualToString:@""]) {
+	if ([val isEqualToString:@""]) {
 		return;
 	}
 	NSString *message = [NSString stringWithFormat:@"%@\n", [textField stringValue]];
 	NSData* data = [message dataUsingEncoding: NSASCIIStringEncoding];
+	NSLog(@"write message: %@", val);
 	[client writeData:data withTimeout:-1 tag:0];
 }
 

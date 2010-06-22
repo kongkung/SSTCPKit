@@ -52,6 +52,7 @@
 
 - (void)onSocket:(AsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag
 {
+	NSLog(@"hej gay");
 	if (self.delegate && [self.delegate respondsToSelector:@selector(clientConnection:didReadData:withTag:)]) {
 		[self.delegate clientConnection: self didReadData: data withTag:tag];
 	}	

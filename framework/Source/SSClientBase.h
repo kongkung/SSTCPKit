@@ -4,7 +4,6 @@
 
 @interface SSClientBase : NSObject {
 	AsyncSocket *_socket;
-
 }
 
 - (void)readDataToLineFeedWithTimeout:(NSTimeInterval)timeout tag:(long)tag;

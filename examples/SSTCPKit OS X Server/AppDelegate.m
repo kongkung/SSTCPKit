@@ -49,17 +49,19 @@
 
 - (void)server:(SSServer *) aServer didAcceptNewClientConnection:(SSClientConnection *)aClientConnection;
 {
+	NSLog(@"server:didAcceptNewClientConnection: %@", aClientConnection);
 	aClientConnection.delegate = self;
 }
 
-- (void)clientConnectionDidConnect:(SSClientConnection *)clientConnection
+- (void)clientConnectionDidConnect:(SSClientConnection *)aClientConnection
 {
-	NSLog(@"clientConnectionDidConnect:");
-	[clientConnection readDataToLineFeedWithTimeout:-1 tag:0];
+	NSLog(@"clientConnectionDidConnect: %@", aClientConnection);
+	[aClientConnection readDataToLineFeedWithTimeout:-1 tag:0];
 }
 
 - (void)clientConnection:(SSClientConnection *)clientConnection didReadData: (NSData *)aData withTag: (long)tag
 {
+	NSLog(@"clientConnectionDidReadData:");
 	NSString* message = [[[NSString alloc] initWithData:aData encoding:NSASCIIStringEncoding] autorelease];
 	lastMessage.stringValue = message;	
 	[clientConnection readDataToLineFeedWithTimeout:-1 tag:0];

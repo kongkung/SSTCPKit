@@ -20,8 +20,8 @@
 	id<SSClientDelegate> _delegate;
 }
 
-- (id)initWithServiceOfType: (NSString *)aType inDomain:(NSString *)aDomain delegate: (id)aDelegate;
-- (id)initWithServiceOfType: (NSString *)type inDomain:(NSString *)domain;
+- (id)initWithServiceOfType:(NSString *)aType inDomain:(NSString *)aDomain delegate: (id)aDelegate;
+- (id)initWithServiceOfType:(NSString *)type inDomain:(NSString *)domain;
 - (void)disconnect;
 
 @property (readonly, nonatomic) BOOL isConnected;
@@ -33,8 +33,9 @@
 @protocol SSClientDelegate<NSObject>
 
 @optional
--(void)clientDidConnect:(SSClient *)aClient;
--(void)client: (SSClient *)aClient didReadData:(NSData *)data withTag:(long)tag;
--(void)client: (SSClient *)aClient didWriteDataWithTag:(long)tag;
+- (void)clientDidConnect:(SSClient *)aClient;
+- (void)client:(SSClient *)aClient didReadData:(NSData *)data withTag:(long)tag;
+- (void)client:(SSClient *)aClient didWriteDataWithTag:(long)tag;
+- (void)client:(SSClient *)aClient gotServiceRemoved:(NSNetService *)aNetService;
 
 @end
