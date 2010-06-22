@@ -40,8 +40,4 @@
 @optional
 - (void)serverIsPublished:(SSServer *)server;
 - (void)server:(SSServer *) server didAcceptNewClientConnection:(SSClientConnection *)clientConnection;
-- (void)clientConnectionDidConnect:(SSClientConnection *)clientConnection;
-- (void)clientConnection:(SSClientConnection *)clientConnection didReadData: (NSData *)data withTag: (long)tag;
-- (void)clientConnection:(SSClientConnection *)clientConnection didReadString: (NSString *)aString withTag: (long)tag;
-
 @end

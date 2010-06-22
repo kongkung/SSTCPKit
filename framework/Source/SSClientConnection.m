@@ -14,6 +14,7 @@
 @implementation SSClientConnection
 
 @synthesize server;
+@synthesize delegate = _delegate;
 
 #pragma mark -
 #pragma mark Init, Dealloc
@@ -44,20 +45,20 @@
 
 - (void)onSocket:(AsyncSocket *)sock didConnectToHost:(NSString *)host port:(UInt16)port;
 {
-	if (self.server.delegate && [self.server.delegate respondsToSelector:@selector(clientConnectionDidConnect:)]) {
-		[self.server.delegate clientConnectionDidConnect: self];
+	if (self.delegate && [self.delegate respondsToSelector:@selector(clientConnectionDidConnect:)]) {
+		[self.delegate clientConnectionDidConnect: self];
 	}
 }
 
 - (void)onSocket:(AsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag
 {
-	if (self.server.delegate && [self.server.delegate respondsToSelector:@selector(clientConnection:didReadData:withTag:)]) {
-		[self.server.delegate clientConnection: self didReadData: data withTag:tag];
+	if (self.delegate && [self.delegate respondsToSelector:@selector(clientConnection:didReadData:withTag:)]) {
+		[self.delegate clientConnection: self didReadData: data withTag:tag];
 	}	
 	
-	if (self.server.delegate && [self.server.delegate respondsToSelector:@selector(clientConnection:didReadString:withTag:)]) {
+	if (self.delegate && [self.delegate respondsToSelector:@selector(clientConnection:didReadString:withTag:)]) {
 		NSString *str = [[[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding] autorelease];
-		[self.server.delegate clientConnection: self didReadString: str withTag:tag];
+		[self.delegate clientConnection: self didReadString: str withTag:tag];
 	}
 }
 
