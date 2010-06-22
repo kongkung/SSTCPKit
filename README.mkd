@@ -1,0 +1,15 @@
+## Introduction
+
+This framework is basically a wrapper for easy setup of Bonjour and send data via sockets.
+
+Only the most essential features are implemented and more error handling will come as well as an iPhone version.
+
+## Todo
+
+Better example of adding framework to the examples.
+
+## Example usage
+
+* Start examples/OS X Server build and run
+* Start examples/OS X Client build and run, write something in the text field and press send
+* Notice the message appear in the Server window 
