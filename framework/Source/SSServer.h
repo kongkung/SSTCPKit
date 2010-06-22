@@ -1,4 +1,4 @@
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 #import "SSClientBase.h"
 
 @class SSClientConnection;
@@ -9,7 +9,11 @@
 
 #define SSClientConnectionDidDieNotification @"SSClientConnectionDidDie"
 
-@interface SSServer : NSObject <NSNetServiceDelegate> {
+@interface SSServer : NSObject 
+#if !TARGET_OS_IPHONE
+<NSNetServiceDelegate>
+#endif
+{
 
 	NSMutableArray *connections;
 

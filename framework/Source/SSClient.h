@@ -1,10 +1,14 @@
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 #import "SSClientBase.h"
 
 @protocol SSClientDelegate;
 
 
-@interface SSClient : SSClientBase  <NSNetServiceBrowserDelegate, NSNetServiceDelegate> {
+@interface SSClient : SSClientBase
+#if !TARGET_OS_IPHONE
+<NSNetServiceBrowserDelegate, NSNetServiceDelegate>
+#endif
+{
 	
 @protected
 	BOOL isConnected;

@@ -47,6 +47,11 @@
 	NSLog(@"serverIsPublished:");
 }
 
+- (void)server:(SSServer *) aServer didAcceptNewClientConnection:(SSClientConnection *)aClientConnection;
+{
+	aClientConnection.delegate = self;
+}
+
 - (void)clientConnectionDidConnect:(SSClientConnection *)clientConnection
 {
 	NSLog(@"clientConnectionDidConnect:");

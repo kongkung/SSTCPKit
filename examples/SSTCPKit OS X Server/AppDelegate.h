@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate> {
+@interface AppDelegate : NSObject <NSApplicationDelegate, SSServerDelegate, SSClientConnectionDelegate> {
     NSWindow *window;
 	IBOutlet NSTextField *lastMessage;
 	SSServer *server;
