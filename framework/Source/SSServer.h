@@ -6,7 +6,6 @@
 
 @protocol SSServerDelegate;
 
-
 #define SSClientConnectionDidDieNotification @"SSClientConnectionDidDie"
 
 @interface SSServer : NSObject 
@@ -14,7 +13,6 @@
 <NSNetServiceDelegate>
 #endif
 {
-
 	NSMutableArray *connections;
 
 @private
@@ -32,12 +30,15 @@
 
 @property (retain, nonatomic) NSMutableArray *connections;
 @property (assign, nonatomic) id delegate;
+@property (readonly, nonatomic) NSString *domain;
+@property (readonly, nonatomic) NSString *type;
+@property (readonly, nonatomic) NSString *name;
 
 @end
 
 @protocol SSServerDelegate<NSObject>
 
 @optional
-- (void)serverIsPublished:(SSServer *)server;
-- (void)server:(SSServer *) server didAcceptNewClientConnection:(SSClientConnection *)clientConnection;
+- (void)serverIsPublished:(SSServer *)aServer;
+- (void)server:(SSServer *)aServer didAcceptNewClientConnection:(SSClientConnection *)aClientConnection;
 @end

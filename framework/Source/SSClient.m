@@ -11,7 +11,7 @@
 
 @interface SSClient ()
 
-- (BOOL) setupWithServiceOfType: (NSString *)type inDomain:(NSString *)domain;
+- (BOOL)setupWithServiceOfType:(NSString *)aType inDomain:(NSString *)aDomain;
 
 @end
 
@@ -30,7 +30,7 @@
 	
 }
 
-- (id)initWithServiceOfType: (NSString *)aType inDomain:(NSString *)aDomain
+- (id)initWithServiceOfType:(NSString *)aType inDomain:(NSString *)aDomain
 {
 	if (self = [super init]) {
 		[self setupWithServiceOfType: aType inDomain: aDomain];
@@ -48,12 +48,12 @@
     [super dealloc];
 }
 
-- (BOOL) setupWithServiceOfType: (NSString *)type inDomain:(NSString *)domain
+- (BOOL) setupWithServiceOfType:(NSString *)aType inDomain:(NSString *)aDomain
 {
     _services = [[NSMutableArray alloc] init];
     _browser = [[NSNetServiceBrowser alloc] init];
     [_browser setDelegate: self];
-    [_browser searchForServicesOfType: type inDomain: domain];
+    [_browser searchForServicesOfType:aType inDomain:aDomain];
 	return YES;
 }
 

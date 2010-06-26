@@ -24,14 +24,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 4F8C47EC11D142A70067CB84 /* SSTCPKit-iOS.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libSSTCPKit_iOS.a */;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = "SSTCPKit-iOS";
 		};
 		4F8C47FB11D142DE0067CB84 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4F8C47EC11D142A70067CB84 /* SSTCPKit-iOS.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D /* SSTCPKit-iOS */;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = "SSTCPKit-iOS";
 		};
 /* End PBXContainerItemProxy section */

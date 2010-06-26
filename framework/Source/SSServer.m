@@ -8,11 +8,11 @@
 
 @synthesize connections;
 @synthesize delegate = _delegate;
+@synthesize domain, type, name;
 
 - (id) init
 {
-	if (self = [super init]) 
-	{
+	if (self = [super init]) {
 		_socket = [[AsyncSocket alloc] initWithDelegate: self];
 		
 		self.connections = [[[NSMutableArray alloc] init] autorelease];
@@ -31,8 +31,7 @@
 		
 		// Start threads
 		uint i;
-		for(i = 0; i < THREAD_POOL_SIZE; i++)
-		{
+		for(i = 0; i < THREAD_POOL_SIZE; i++) {
 			[NSThread detachNewThreadSelector:@selector(connectionThread:)
 									 toTarget:self
 								   withObject:[NSNumber numberWithUnsignedInt:i]];
@@ -41,16 +40,15 @@
 	return self;
 }
 
-- (id) initWithDelegate: (id)aDelegate
+- (id)initWithDelegate: (id)aDelegate
 {
-	if (self = [self init]) 
-	{
+	if (self = [self init]) {
 		self.delegate = aDelegate;
 	}
 	return self;
 }
 
-- (void) dealloc
+- (void)dealloc
 {
 	
 	[self stop];
@@ -62,7 +60,7 @@
 	[super dealloc];
 }
 
-- (BOOL) startWithDomain: (NSString *)domain type: (NSString *)type name: (NSString *) name error: (NSError **)error 
+- (BOOL)startWithDomain: (NSString *)aDomain type: (NSString *)aType name: (NSString *)aName error:(NSError **)error 
 {
 	BOOL success;
 	int port; 
@@ -82,9 +80,9 @@
 	
 	if (success) {
 		//_netService = [[NSNetService alloc] initWithDomain:@"" type:@"_poop.tcp." name:name port:port];
-		_netService = [[NSNetService alloc] initWithDomain:domain type:type 
-													 name:name port:port];
-		NSLog(@"%@, initWithDomain: %@ type: %@", _netService, domain, type);
+		_netService = [[NSNetService alloc] initWithDomain:aDomain type:aType 
+													 name:aName port:port];
+		NSLog(@"%@, initWithDomain: %@ type: %@", _netService, aDomain, aType);
 		success = (_netService != nil);
     }
 	
@@ -254,10 +252,20 @@
 	NSLog(@"Error Dict: %@", errorDict);
 }
 
-#pragma mark -
-#pragma mark AsyncSocket delegate methods
+- (NSString *)domain
+{
+	return _netService.domain;
+}
 
+- (NSString *)type
+{
+	return _netService.type;
+}
 
+- (NSString *)name
+{
+	return _netService.name;
+}
 
 
 @end

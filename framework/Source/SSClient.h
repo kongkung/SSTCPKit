@@ -21,12 +21,11 @@
 }
 
 - (id)initWithServiceOfType:(NSString *)aType inDomain:(NSString *)aDomain delegate: (id)aDelegate;
-- (id)initWithServiceOfType:(NSString *)type inDomain:(NSString *)domain;
+- (id)initWithServiceOfType:(NSString *)aType inDomain:(NSString *)aDomain;
 - (void)disconnect;
 
 @property (readonly, nonatomic) BOOL isConnected;
 @property (assign, nonatomic) id delegate;
-
 @end
 
 

@@ -21,9 +21,9 @@
 @protocol SSClientConnectionDelegate<NSObject>
 
 @optional
-- (void)clientConnectionDidConnect:(SSClientConnection *)clientConnection;
-- (void)clientConnection:(SSClientConnection *)clientConnection didReadData: (NSData *)data withTag: (long)tag;
-- (void)clientConnection:(SSClientConnection *)clientConnection didReadString: (NSString *)aString withTag: (long)tag;
+- (void)clientConnectionDidConnect:(SSClientConnection *)aClientConnection;
+- (void)clientConnection:(SSClientConnection *)aClientConnection didReadData:(NSData *)aData withTag:(long)tag;
+- (void)clientConnection:(SSClientConnection *)aClientConnection didReadString:(NSString *)aString withTag:(long)tag;
 
 @end
 
