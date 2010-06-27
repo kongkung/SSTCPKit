@@ -50,6 +50,15 @@
 	}
 }
 
+
+- (void)onSocketDidDisconnect:(AsyncSocket *)sock
+{
+	if (self.delegate && [self.delegate respondsToSelector:@selector(clientConnectionDidDisconnect:)]) {
+		[self.delegate clientConnectionDidDisconnect:self];
+	}
+}
+
+
 - (void)onSocket:(AsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag
 {
 	if (self.delegate && [self.delegate respondsToSelector:@selector(clientConnection:didReadData:withTag:)]) {

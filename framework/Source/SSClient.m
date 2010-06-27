@@ -140,27 +140,29 @@
 
 - (void)onSocketDidDisconnect:(AsyncSocket *)sock
 {
-	NSLog(@"- (void)onSocketDidDisconnect:(AsyncSocket *)sock");
+	if (self.delegate && [self.delegate respondsToSelector:@selector(clientDidDisconnect:)]) {
+		[self.delegate clientDidDisconnect:self];
+	}
 }
 
 - (void)onSocket:(AsyncSocket *)sock didConnectToHost:(NSString *)host port:(UInt16)port
 {
-	if (_delegate && [_delegate respondsToSelector:@selector(clientDidConnect:)]) {
-		[_delegate clientDidConnect:self];
+	if (self.delegate && [self.delegate respondsToSelector:@selector(clientDidConnect:)]) {
+		[self.delegate clientDidConnect:self];
 	}
 }
 
 - (void)onSocket:(AsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag
 {
-	if (_delegate && [_delegate respondsToSelector:@selector(client:didReadData:withTag:)]) {
-		[_delegate client:self didReadData: data withTag: tag];
+	if (self.delegate && [self.delegate respondsToSelector:@selector(client:didReadData:withTag:)]) {
+		[self.delegate client:self didReadData: data withTag: tag];
 	}
 }
 
 - (void)onSocket:(AsyncSocket *)sock didWriteDataWithTag:(long)tag
 {
-	if (_delegate && [_delegate respondsToSelector:@selector(client:didWriteDataWithTag:)]) {
-		[_delegate client:self didWriteDataWithTag:tag];
+	if (self.delegate && [self.delegate respondsToSelector:@selector(client:didWriteDataWithTag:)]) {
+		[self.delegate client:self didWriteDataWithTag:tag];
 	}
 }
 

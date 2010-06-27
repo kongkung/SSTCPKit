@@ -33,6 +33,7 @@
 
 @optional
 - (void)clientDidConnect:(SSClient *)aClient;
+- (void)clientDidDisconnect:(SSClient *)aClient;
 - (void)client:(SSClient *)aClient didReadData:(NSData *)data withTag:(long)tag;
 - (void)client:(SSClient *)aClient didWriteDataWithTag:(long)tag;
 - (void)client:(SSClient *)aClient gotServiceRemoved:(NSNetService *)aNetService;

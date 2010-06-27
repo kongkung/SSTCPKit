@@ -22,6 +22,7 @@
 
 @optional
 - (void)clientConnectionDidConnect:(SSClientConnection *)aClientConnection;
+- (void)clientConnectionDidDisconnect:(SSClientConnection *)aClientConnection;
 - (void)clientConnection:(SSClientConnection *)aClientConnection didReadData:(NSData *)aData withTag:(long)tag;
 - (void)clientConnection:(SSClientConnection *)aClientConnection didReadString:(NSString *)aString withTag:(long)tag;
 - (void)clientConnection:(SSClientConnection *)aClientConnection didWriteDataWithTag:(long)tag;
